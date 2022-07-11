@@ -75,12 +75,9 @@ public class Main {
         if (true) {
             StringBuilder line = new StringBuilder();
             for (int j = 0; j < outputaccount.size(); j++) {
-//                line.append("\"");
                 line.append(outputaccount.get(j)
-//                        .replaceAll("\"","\"\"")
                 );
                 line.append("\n");
-//                line.append("\"");
                 if (j != outputaccount.size() - 1) {
                    continue;
                 }
