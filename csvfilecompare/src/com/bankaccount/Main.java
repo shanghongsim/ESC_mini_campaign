@@ -6,8 +6,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.nio.file.Files;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-public class Main {
+public class csvcompare {
     public static void main(String[] args) throws IOException {
         BufferedReader br1 = new BufferedReader(new FileReader("sample_file_1.csv"));
         BufferedReader br2 = new BufferedReader(new FileReader("sample_file_2.csv"));
@@ -70,16 +73,19 @@ public class Main {
             i++;
         }
         System.out.println(outputaccount);
-        
+
         File csvFile = new File("output.csv");
         FileWriter fileWriter = new FileWriter(csvFile);
 
         if (true) {
             StringBuilder line = new StringBuilder();
             for (int j = 0; j < outputaccount.size(); j++) {
+//                line.append("\"");
                 line.append(outputaccount.get(j)
+//                        .replaceAll("\"","\"\"")
                 );
                 line.append("\n");
+//                line.append("\"");
                 if (j != outputaccount.size() - 1) {
                    continue;
                 }
@@ -88,5 +94,8 @@ public class Main {
             fileWriter.write(line.toString());
         }
         fileWriter.close();
+        
+        assertEquals(new BufferedReader(new FileReader("output.csv")).readLine(), "ID99 BOS8059799 SGD CURRENT 208045");
+
     }
 }
