@@ -29,3 +29,6 @@ Examples of boundary values include:
   - Account types outside of boundary: Current/Savings or an invalid account type (Curent).
 - Amounts: Both amounts must be equal
   - Amounts outside of boundary: Non-equal amount, invalid amount.
+
+## Usage
+Use csv_compare.java and two csv files to be compared. Replace sample_file_1.csv and sample_file_3.csv with two files to be compared.
