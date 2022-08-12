@@ -1,3 +1,5 @@
+//Please use csv_compare.java instead.
+
 package com.bankaccount;
 import java.io.*;
 import java.util.*;
