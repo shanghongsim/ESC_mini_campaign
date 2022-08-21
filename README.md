@@ -10,15 +10,15 @@ By Sim Shang Hong (1005500)
 
 ## Overview of test
 
-Thus decided to implement basic unit tests to check if constructor is callable and if output is successfully written to output.csv. I also did some manual testing (change the hardcoded file path in peer's implemrenation) to check if it can handle different file formats
+Thus decided to implement basic unit tests to check if constructor is callable and if output is successfully written to output.csv. I also did some manual testing (change the hardcoded file path in peer's implementation) to check if it can handle different file formats
 
 ## Testing
 
 1. Unit testing
-   a. Test if constructor is callable => passed
-   b. Test if output successfully written to output.csv by checking if output.csv is empty. => Failed. Output not written to output.csv. Bug #1.
+   - Test if constructor is callable => Passed
+   - Test if output successfully written to output.csv by checking if output.csv is empty. => Failed. Output not written to output.csv. Bug #1.
 2. Fault based testing
-   Manually changed the hardcoded file path in peer's code to another randomly generated csv file (CsvRandomGenerator.java, own code) to check if it can handle files with both 4 columns instead of both 5 columns. The program threw an exception. However, there was no documentation stating that files need exactly 5 columns. Bug #2/
+   - Manually changed the hardcoded file path in peer's code to another randomly generated csv file (CsvRandomGenerator.java, own code) to check if it can handle files with both 4 columns instead of both 5 columns. The program threw an exception. However, there was no documentation stating that files need exactly 5 columns. Bug #2/
 
 ## Bugs
 
