@@ -5,10 +5,13 @@ import java.util.*;
 
 public class csv_compare {
     public static void main(String[] args) throws IOException {
-        BufferedReader br1 = new BufferedReader(new FileReader("sample_file_1.csv"));
+        BufferedReader br1 = new BufferedReader(new FileReader(
+                "/Users/shanghongsim/SoftwareTestingCampaignPeerTest/YuZheng/ESC_mini_campaign/csvfilecompare/sample_file_1.csv"));
         // Replace sample_file_1.csv with one of the files to be compared.
-        BufferedReader br2 = new BufferedReader(new FileReader("sample_file_2.csv"));
-        BufferedReader br3 = new BufferedReader(new FileReader("sample_file_3.csv"));
+        BufferedReader br2 = new BufferedReader(new FileReader(
+                "/Users/shanghongsim/SoftwareTestingCampaignPeerTest/YuZheng/ESC_mini_campaign/csvfilecompare/sample_file_1.csv"));
+        BufferedReader br3 = new BufferedReader(new FileReader(
+                "/Users/shanghongsim/SoftwareTestingCampaignPeerTest/YuZheng/ESC_mini_campaign/csvfilecompare/sample_file_1.csv"));
         // Replace sample_file_3.csv with one of the files to be compared.
 
         ArrayList<Account> account1 = new ArrayList<Account>();
@@ -42,7 +45,7 @@ public class csv_compare {
             String account_currency2 = detailed2[2].substring(0, detailed2[2].length());
             String account_type2 = detailed2[3].substring(0, detailed2[3].length());
             String account_balance2 = detailed2[4].substring(0, detailed2[4].length());
-            account2.add(new Account(account_id2,account_number2,account_currency2, account_type2, account_balance2));
+            account2.add(new Account(account_id2, account_number2, account_currency2, account_type2, account_balance2));
         }
         while ((currentLine3 = br3.readLine()) != null) {
             String[] detailed3 = currentLine3.split(",");
@@ -53,7 +56,7 @@ public class csv_compare {
             String account_currency3 = detailed3[2].substring(0, detailed3[2].length());
             String account_type3 = detailed3[3].substring(0, detailed3[3].length());
             String account_balance3 = detailed3[4].substring(0, detailed3[4].length());
-            account3.add(new Account(account_id3, account_number3,account_currency3, account_type3, account_balance3));
+            account3.add(new Account(account_id3, account_number3, account_currency3, account_type3, account_balance3));
         }
 
         System.out.println(account1);
@@ -75,14 +78,14 @@ public class csv_compare {
         if (true) {
             StringBuilder line = new StringBuilder();
             for (int j = 0; j < outputaccount.size(); j++) {
-//                line.append("\"");
+                // line.append("\"");
                 line.append(outputaccount.get(j)
-//                        .replaceAll("\"","\"\"")
+                // .replaceAll("\"","\"\"")
                 );
                 line.append("\n");
-//                line.append("\"");
+                // line.append("\"");
                 if (j != outputaccount.size() - 1) {
-                   continue;
+                    continue;
                 }
             }
             line.append("\n");
